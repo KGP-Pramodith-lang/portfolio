@@ -3,28 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Personal Website</title>
+    <title>My Portfolio - Professional Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Header -->
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Welcome to My Personal Website</h1>
-        <p>Minimal. Professional. Clean.</p>
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-photo">
+                <img src="https://via.placeholder.com/200" alt="Profile Photo" id="profileImage">
+            </div>
+            <h1 id="heroTitle">Welcome to My Portfolio</h1>
+            <p id="heroSubtitle">Professional. Creative. Innovative.</p>
+            <button class="cta-button" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+        </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p id="aboutText">Hello! I'm a passionate professional dedicated to continuous learning and personal growth. I specialize in creating innovative solutions and bringing ideas to life through technology and creativity.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">My Portfolio</h2>
+            <p id="portfolioIntro">Here are some projects I've worked on:</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3 id="project1Title">Project 1</h3>
+                    <p id="project1Description">An innovative web application that solves real-world problems with modern technology.</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3 id="project2Title">Project 2</h3>
+                    <p id="project2Description">A creative design project showcasing user experience and visual appeal.</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3 id="project3Title">Project 3</h3>
+                    <p id="project3Description">A full-stack solution demonstrating technical expertise and problem-solving skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <span id="emailAddress">41-dba-0044@kdu.ac.lk</span></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pasan-pramodith-56ab33306/" target="_blank" id="linkedinUrl">linkedin.com/in/pasan-pramodith</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2025 My Personal Website | All Rights Reserved</p>
+        <p id="footerText">© 2025 My Professional Portfolio | All Rights Reserved</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
