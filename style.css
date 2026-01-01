@@ -3,16 +3,22 @@
   /* Core palette */
   --bg: #051819;
   --bg-alt: #000000;
+
   --fg: #f1f3f4;
   --fg-90: rgba(241, 243, 244, 0.9);
-  --fg-80: #96a7a1;
-  --fg-70: rgba(150, 167, 161, 0.85);
-  --fg-60: rgba(150, 167, 161, 0.6);
+  --fg-80: #9fb3ad;
+  --fg-70: rgba(159, 179, 173, 0.85);
+  --fg-60: rgba(159, 179, 173, 0.6);
 
   /* Accents */
   --accent: #2cf8ff;
   --accent-2: #18ffb0;
   --accent-30: rgba(44, 248, 255, 0.3);
+
+  /* Cursor glow colors */
+  --glow-primary: rgba(44, 248, 255, 0.14);
+  --glow-secondary: rgba(24, 255, 176, 0.09);
+  --glow-outer: rgba(44, 248, 255, 0.04);
 
   /* Shadows / surfaces */
   --bg-80: rgba(5, 24, 25, 0.8);
@@ -33,6 +39,51 @@ body {
   color: var(--fg);
   line-height: 1.6;
   scroll-behavior: smooth;
+}
+
+/* Background cursor glow (behind content) */
+.cursor-glow {
+  position: fixed;
+  left: var(--cursor-x, -999px);
+  top: var(--cursor-y, -999px);
+  width: 980px;
+  height: 980px;
+  transform: translate3d(-50%, -50%, 0);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 180ms ease, transform 180ms ease;
+  filter: blur(96px);
+
+  background: radial-gradient(
+      circle at center,
+      var(--glow-primary) 0%,
+      rgba(44, 248, 255, 0.08) 45%,
+      transparent 78%
+    ),
+    radial-gradient(
+      circle at center,
+      var(--glow-secondary) 0%,
+      var(--glow-outer) 60%,
+      transparent 88%
+    );
+}
+
+.cursor-glow.is-visible {
+  opacity: 0.6;
+  transform: translate3d(-50%, -50%, 0) scale(1.25);
+}
+
+/* Keep all content above the glow layer */
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce), (pointer: coarse) {
+  .cursor-glow {
+    display: none;
+  }
 }
 
 /* Header - Fixed Navigation */
@@ -175,10 +226,14 @@ body {
 }
 
 .hero h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
+  font-size: clamp(3.2rem, 7vw, 6.6rem);
+  margin-bottom: 16px;
   color: var(--fg);
-  text-shadow: 2px 2px 4px var(--bg-80);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  text-shadow: none;
 }
 
 .hero p {

@@ -1,103 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KGP Pramodith</title>
-    <link rel="icon" type="image/png" href="images/icon.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
     <!-- Search Bar -->
     <div class="search-bar-container">
-        <input type="text" class="search-bar" placeholder="Search...">
-        <button class="search-btn">
-            <i class="fas fa-search"></i>
-        </button>
+      <input type="text" class="search-bar" placeholder="Search..." />
+      <button class="search-btn">
+        <i class="fas fa-search"></i>
+      </button>
     </div>
 
     <!-- Social Icons -->
     <div class="social-icons">
-        <a class="social-icon" aria-label="LinkedIn" href="https://www.linkedin.com/in/pasan-pramodith-56ab33306/" target="_blank" rel="noopener">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a class="social-icon" aria-label="Instagram" href="https://www.instagram.com/pramod_k.gamage/" target="_blank" rel="noopener">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a class="social-icon" aria-label="GitHub" href="https://github.com/KGP-Pramodith-lang" target="_blank" rel="noopener">
-            <i class="fa-brands fa-github"></i>
-        </a>
+      <a
+        class="social-icon"
+        aria-label="LinkedIn"
+        href="https://www.linkedin.com/in/pasan-pramodith-56ab33306/"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a
+        class="social-icon"
+        aria-label="Instagram"
+        href="https://www.instagram.com/pramod_k.gamage/"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a
+        class="social-icon"
+        aria-label="GitHub"
+        href="https://github.com/KGP-Pramodith-lang"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
     </div>
 
     <!-- Home Section -->
     <section id="home" class="hero">
-        <div class="hero-grid">
-            <div class="hero-text">
-                <h1 id="heroTitle">Welcome I'm Pasan</h1>
-                <p id="heroSubtitle">Founder @easytutor.lk | 
-                    Full stack web developer | AI/ML Engineer | 
-                    Professional Web scrapper | Data Scientist</p>
-                <button class="cta-button" id="learnMoreBtn">Learn More</button>
-            </div>
-            <div class="hero-image">
-                <img src="images/dp.png" alt="Display Picture" id="heroImage">
-            </div>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1 id="heroTitle">KGP PRAMODITH</h1>
+          <p id="heroSubtitle">
+            Founder @easytutor.lk | Full stack web developer | AI/ML Engineer |
+            Professional Web scrapper | Data Scientist
+          </p>
+          <button class="cta-button" id="learnMoreBtn">Learn More</button>
         </div>
+        <div class="hero-image">
+          <img src="images/dp.png" alt="Display Picture" id="heroImage" />
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p id="aboutText">As a Data Science & Business Analytics undergraduate, I am passionate about 
-                sitting at the intersection of data, technology, and strategy. My studies at General Sir 
-                John Kotelawala Defence University have fueled my interest in the transformative 
-                potential of Artificial Intelligence, Machine Learning, Deep Learning, and Quantum Computing.
-                I enjoy applying a strategic mindset to complex problems and have developed strong skills in 
-                leadership and planning through my academic and extracurricular activities. My goal is to 
-                leverage data not just for insight, but for impactful innovation.</p>
-        </div>
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p id="aboutText">
+          As a Data Science & Business Analytics undergraduate, I am passionate
+          about sitting at the intersection of data, technology, and strategy.
+          My studies at General Sir John Kotelawala Defence University have
+          fueled my interest in the transformative potential of Artificial
+          Intelligence, Machine Learning, Deep Learning, and Quantum Computing.
+          I enjoy applying a strategic mindset to complex problems and have
+          developed strong skills in leadership and planning through my academic
+          and extracurricular activities. My goal is to leverage data not just
+          for insight, but for impactful innovation.
+        </p>
+      </div>
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">My Portfolio</h2>
-            <p id="portfolioIntro">Here are some projects I've worked on:</p>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <h3 id="project1Title">Project 1</h3>
-                    <p id="project1Description">An innovative web application that solves real-world problems with modern technology.</p>
-                </div>
-                <div class="portfolio-item">
-                    <h3 id="project2Title">Project 2</h3>
-                    <p id="project2Description">A creative design project showcasing user experience and visual appeal.</p>
-                </div>
-                <div class="portfolio-item">
-                    <h3 id="project3Title">Project 3</h3>
-                    <p id="project3Description">A full-stack solution demonstrating technical expertise and problem-solving skills.</p>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">My Portfolio</h2>
+        <p id="portfolioIntro">Here are some projects I've worked on:</p>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <h3 id="project1Title">Project 1</h3>
+            <p id="project1Description">
+              An innovative web application that solves real-world problems with
+              modern technology.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <h3 id="project2Title">Project 2</h3>
+            <p id="project2Description">
+              A creative design project showcasing user experience and visual
+              appeal.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <h3 id="project3Title">Project 3</h3>
+            <p id="project3Description">
+              A full-stack solution demonstrating technical expertise and
+              problem-solving skills.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-info">
-                <p><strong>Email:</strong> <span id="emailAddress">41-dba-0044@kdu.ac.lk</span></p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pasan-pramodith-56ab33306/" target="_blank" id="linkedinUrl">linkedin.com/in/pasan-pramodith</a></p>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-info">
+          <p>
+            <strong>Email:</strong>
+            <span id="emailAddress">41-dba-0044@kdu.ac.lk</span>
+          </p>
+          <p>
+            <strong>LinkedIn:</strong>
+            <a
+              href="https://www.linkedin.com/in/pasan-pramodith-56ab33306/"
+              target="_blank"
+              id="linkedinUrl"
+              >linkedin.com/in/pasan-pramodith</a
+            >
+          </p>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p id="footerText">© 2025 KGP Pramodith | All Rights Reserved</p>
+      <p id="footerText">© 2025 KGP Pramodith | All Rights Reserved</p>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
