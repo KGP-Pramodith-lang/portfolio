@@ -350,6 +350,26 @@ body.is-loaded .hero-image img {
     border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
+/* Hero actions row (Learn More + WhatsApp) */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Inline variant: same look as scroll button, but not fixed/hidden */
+.scroll-top-btn.scroll-top-btn--inline {
+  position: static;
+  right: auto;
+  bottom: auto;
+
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+
+  text-decoration: none;
+}
+
 .scroll-top-btn.is-visible {
   opacity: 1;
   transform: translateY(0) scale(1);
