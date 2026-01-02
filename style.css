@@ -41,6 +41,148 @@ body {
   scroll-behavior: smooth;
 }
 
+/* -------------------------------------------------------------------------- */
+/* Animations (site-wide)                                                     */
+/* -------------------------------------------------------------------------- */
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpScale {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Initial load: state bar + hero content */
+.state-bar {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+body.is-loaded .state-bar {
+  animation: fadeDown 680ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.hero-text > * {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+body.is-loaded .hero-text > * {
+  animation: fadeUp 760ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+body.is-loaded .hero-text > *:nth-child(1) {
+  animation-delay: 140ms;
+}
+
+body.is-loaded .hero-text > *:nth-child(2) {
+  animation-delay: 260ms;
+}
+
+body.is-loaded .hero-text > *:nth-child(3) {
+  animation-delay: 380ms;
+}
+
+.hero-image img {
+  opacity: 0;
+  transform: translateY(14px) scale(0.992);
+}
+
+body.is-loaded .hero-image img {
+  animation: fadeUpScale 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: 220ms;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes revealUpScale {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Scroll reveal: applied via JS by toggling .reveal + .is-revealed.
+   Uses keyframes so it can replay on every re-entry. */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  filter: blur(2px);
+  transition: opacity 220ms ease, transform 220ms ease, filter 220ms ease;
+  will-change: opacity, transform, filter;
+}
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  animation: revealUp 640ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.reveal.reveal--scale.is-revealed {
+  animation-name: revealUpScale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    scroll-behavior: auto;
+  }
+
+  .state-bar,
+  .hero-text > *,
+  .hero-image img,
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 /* Background cursor glow (behind content) */
 .cursor-glow {
   position: fixed;

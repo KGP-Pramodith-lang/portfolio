@@ -1,5 +1,8 @@
 // Smooth scroll for navigation links
 document.addEventListener("DOMContentLoaded", function () {
+  // Mark page as ready for CSS load animations
+  document.body.classList.add("is-loaded");
+
   // Background cursor glow
   const cursorGlow = document.getElementById("cursorGlow");
   const isCoarsePointer =
@@ -142,6 +145,68 @@ document.addEventListener("DOMContentLoaded", function () {
   const reduceMotion =
     window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Scroll-reveal animations (sections/cards)
+  const initScrollReveal = () => {
+    const revealTargets = [
+      ...document.querySelectorAll(
+        ".section-title, #aboutText, #portfolioIntro, .portfolio-item, .photo-card, .contact-info"
+      ),
+    ];
+
+    // Footer should never be hidden by reveal behavior
+    document.querySelectorAll("footer, footer *").forEach((el) => {
+      el.classList.remove("reveal", "reveal--scale", "is-revealed");
+    });
+
+    // Skip if nothing to reveal
+    if (revealTargets.length === 0) return;
+
+    // If user prefers reduced motion, show everything immediately
+    if (reduceMotion) {
+      revealTargets.forEach((el) => {
+        el.classList.add("is-revealed");
+      });
+      return;
+    }
+
+    revealTargets.forEach((el) => {
+      if (!el.classList.contains("reveal")) el.classList.add("reveal");
+
+      // Slightly richer motion for cards
+      if (
+        el.classList.contains("portfolio-item") ||
+        el.classList.contains("photo-card") ||
+        el.classList.contains("contact-info")
+      ) {
+        el.classList.add("reveal--scale");
+      }
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Replay on every re-entry: remove class when leaving, add when entering.
+          if (entry.isIntersecting) {
+            // Restart animation even if it was just on.
+            entry.target.classList.remove("is-revealed");
+            // Force a reflow so the animation can restart reliably.
+            // eslint-disable-next-line no-unused-expressions
+            entry.target.offsetWidth;
+            entry.target.classList.add("is-revealed");
+          } else {
+            entry.target.classList.remove("is-revealed");
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -10% 0px",
+      }
+    );
+
+    revealTargets.forEach((el) => observer.observe(el));
+  };
 
   const initPhotoGallery = (galleryRoot) => {
     const track = galleryRoot.querySelector(".photo-gallery-track");
@@ -302,6 +367,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelectorAll(".photo-gallery")
     .forEach((gallery) => initPhotoGallery(gallery));
+
+  initScrollReveal();
 
   console.log("Portfolio website loaded successfully!");
   console.log("All content is editable via IDs for easy customization.");
