@@ -28,7 +28,6 @@
           <a class="state-link" href="#about">About</a>
           <a class="state-link" href="#skills">Skills</a>
           <a class="state-link" href="#portfolio">Projects</a>
-          <a class="state-link" href="#experience">Experience</a>
           <a class="state-link" href="#education">Education</a>
           <a class="state-link" href="#certifications">Certifications</a>
           <a class="state-link" href="#gallery">Gallery</a>
@@ -75,11 +74,19 @@
             BSc (Hons) Data Science & Business Analytics
           </h4>
           <p id="heroSubtitle">
-            Founder @easytutor.lk | Full stack web developer | AI/ML Engineer |
-            Professional Web scrapper | Data Scientist
+            undergraduate @General Sir John Kotelawala Defence University | Full
+            stack web developer | AI/ML Engineer | Data Engineer | Data
+            Scientist | Web scrapper
           </p>
           <div class="hero-actions">
-            <button class="cta-button" id="learnMoreBtn">Learn More</button>
+            <a
+              class="cta-button"
+              id="downloadCvBtn"
+              href="CV/Pasan%20Pramodith.pdf"
+              download
+              aria-label="Download CV"
+              >Download CV</a
+            >
             <a
               id="whatsAppBtn"
               class="scroll-top-btn scroll-top-btn--inline"
@@ -89,6 +96,7 @@
               aria-label="Chat on WhatsApp"
               title="Chat on WhatsApp"
             >
+              <span class="whatsapp-label">WhatsApp</span>
               <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
             </a>
           </div>
@@ -234,44 +242,6 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-      <div class="container">
-        <h2 class="section-title">Experience</h2>
-        <p id="experienceIntro" class="section-lead">
-          Roles, internships, and leadership experiences.
-        </p>
-
-        <div class="timeline" aria-label="Experience timeline">
-          <article class="timeline-item" aria-label="Experience item 1">
-            <div class="timeline-meta">
-              <h3 class="timeline-title" id="exp1Title">Founder</h3>
-              <p class="timeline-subtitle" id="exp1Org">easytutor.lk</p>
-              <p class="timeline-dates" id="exp1Dates">2024 - Present</p>
-            </div>
-            <p class="timeline-desc" id="exp1Desc">
-              Built and shipped product features, collaborated with users, and
-              iterated quickly based on feedback.
-            </p>
-          </article>
-
-          <article class="timeline-item" aria-label="Experience item 2">
-            <div class="timeline-meta">
-              <h3 class="timeline-title" id="exp2Title">
-                Full Stack Developer
-              </h3>
-              <p class="timeline-subtitle" id="exp2Org">Freelance</p>
-              <p class="timeline-dates" id="exp2Dates">2023 - Present</p>
-            </div>
-            <p class="timeline-desc" id="exp2Desc">
-              Delivered responsive web apps, automation, and data-driven
-              solutions for clients.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- Education Section -->
     <section id="education" class="section section-dark">
       <div class="container">
@@ -391,20 +361,91 @@
     <section id="contact" class="section">
       <div class="container">
         <h2 class="section-title">Contact Me</h2>
+        <div class="contact-actions" aria-label="Contact actions">
+          <a
+            class="cta-button"
+            href="CV/Pasan%20Pramodith.pdf"
+            download
+            aria-label="Download CV"
+            >Download CV</a
+          >
+        </div>
         <div class="contact-info">
-          <p>
-            <strong>Email:</strong>
-            <span id="emailAddress">41-dba-0044@kdu.ac.lk</span>
-          </p>
-          <p>
-            <strong>LinkedIn:</strong>
-            <a
-              href="https://www.linkedin.com/in/pasan-pramodith-56ab33306/"
-              target="_blank"
-              id="linkedinUrl"
-              >linkedin.com/in/pasan-pramodith</a
-            >
-          </p>
+          <div class="contact-grid" aria-label="Contact options">
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <div class="contact-content">
+                <span class="contact-label">Email</span>
+                <a href="mailto:41-dba-0044@kdu.ac.lk" id="emailAddress"
+                  >41-dba-0044@kdu.ac.lk</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <div class="contact-content">
+                <span class="contact-label">LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/pasan-pramodith-56ab33306/"
+                  target="_blank"
+                  rel="noopener"
+                  id="linkedinUrl"
+                  >pasan-pramodith</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <div class="contact-content">
+                <span class="contact-label">GitHub</span>
+                <a
+                  href="https://github.com/KGP-Pramodith-lang"
+                  target="_blank"
+                  rel="noopener"
+                  id="githubUrl"
+                  >KGP-Pramodith-lang</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <div class="contact-content">
+                <span class="contact-label">Instagram</span>
+                <a
+                  href="https://www.instagram.com/pramod_k.gamage/"
+                  target="_blank"
+                  rel="noopener"
+                  id="instagramUrl"
+                  >pramod_k.gamage</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              <div class="contact-content">
+                <span class="contact-label">WhatsApp</span>
+                <a
+                  href="https://wa.me/94705051901?text=Hello%20Pramodith!"
+                  target="_blank"
+                  rel="noopener"
+                  id="whatsappUrl"
+                  >+94 70 505 1901</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <div class="contact-content">
+                <span class="contact-label">Phone</span>
+                <a href="#" id="phoneNumber">+94 70 505 1901</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -73,20 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Learn More button smooth scroll
-  const learnMoreBtn = document.getElementById("learnMoreBtn");
-  if (learnMoreBtn) {
-    learnMoreBtn.addEventListener("click", function () {
-      const aboutSection = document.getElementById("about");
-      if (aboutSection) {
-        aboutSection.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    });
-  }
-
   // Add active state to navigation items on scroll
   const sections = document.querySelectorAll(".section, .hero");
   const navLinks = document.querySelectorAll(".state-nav a[href^='#']");
