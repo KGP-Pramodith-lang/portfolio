@@ -161,7 +161,7 @@
       </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Projects Section -->
     <section id="portfolio" class="section section-dark">
       <div class="container">
         <h2 class="section-title">My Projects</h2>
@@ -185,11 +185,11 @@
               <article class="portfolio-item project-card">
                 <img
                   class="project-thumb"
-                  src="images/icon.png"
+                  src="projects/Machine-Learning.jpg"
                   alt="Project 1 thumbnail"
                   loading="lazy"
                 />
-                <h3 id="project1Title">Project 1</h3>
+                <h3 id="project1Title">Machine Learning Prediction</h3>
                 <p id="project1Description">
                   An innovative web application that solves real-world problems
                   with modern technology.
@@ -199,11 +199,25 @@
               <article class="portfolio-item project-card">
                 <img
                   class="project-thumb"
-                  src="images/icon.png"
+                  src="projects/n8n.avif"
+                  alt="Project 1 thumbnail"
+                  loading="lazy"
+                />
+                <h3 id="project1Title">n8n workflow</h3>
+                <p id="project1Description">
+                  An innovative web application that solves real-world problems
+                  with modern technology.
+                </p>
+              </article>
+
+              <article class="portfolio-item project-card">
+                <img
+                  class="project-thumb"
+                  src="projects/chatbot.webp"
                   alt="Project 2 thumbnail"
                   loading="lazy"
                 />
-                <h3 id="project2Title">Project 2</h3>
+                <h3 id="project2Title">chatbot</h3>
                 <p id="project2Description">
                   A creative design project showcasing user experience and
                   visual appeal.
@@ -213,11 +227,11 @@
               <article class="portfolio-item project-card">
                 <img
                   class="project-thumb"
-                  src="images/icon.png"
+                  src="projects/EDA.avif"
                   alt="Project 3 thumbnail"
                   loading="lazy"
                 />
-                <h3 id="project3Title">Project 3</h3>
+                <h3 id="project3Title">Exploratory Data Analysis</h3>
                 <p id="project3Description">
                   A full-stack solution demonstrating technical expertise and
                   problem-solving skills.
@@ -259,11 +273,24 @@
               <p class="timeline-subtitle" id="edu1Org">
                 General Sir John Kotelawala Defence University
               </p>
-              <p class="timeline-dates" id="edu1Dates">2023 - Present</p>
+              <p class="timeline-dates" id="edu1Dates">2024 - 2028</p>
             </div>
             <p class="timeline-desc" id="edu1Desc">
               Focus areas: AI/ML, analytics, data engineering, and business
               strategy.
+            </p>
+          </article>
+
+          <article class="timeline-item" aria-label="Education item 1">
+            <div class="timeline-meta">
+              <h3 class="timeline-title" id="edu1Title">Secondary Education</h3>
+              <p class="timeline-subtitle" id="edu1Org">
+                H/Rajapaksa Central College
+              </p>
+              <p class="timeline-dates" id="edu1Dates">2014 - 2023</p>
+            </div>
+            <p class="timeline-desc" id="edu1Desc">
+              Focus areas: Secondary Education, corporate social responsibility.
             </p>
           </article>
         </div>
@@ -271,25 +298,76 @@
     </section>
 
     <!-- Certifications Section -->
-    <section id="certifications" class="section">
+    <section id="certifications" class="section section-dark">
       <div class="container">
         <h2 class="section-title">Certifications</h2>
         <p id="certificationsIntro" class="section-lead">
           Selected certifications and professional learning.
         </p>
 
-        <div class="certs" aria-label="Certifications">
-          <article class="cert-card" aria-label="Certification 1">
-            <h3 class="cert-title" id="cert1Title">Certification Name</h3>
-            <p class="cert-subtitle" id="cert1Org">Issuer / Platform</p>
-            <p class="cert-dates" id="cert1Dates">Month YYYY</p>
-          </article>
+        <div
+          class="projects projects--certs"
+          data-item-label="certification"
+          aria-label="Certifications carousel"
+        >
+          <div class="projects-carousel">
+            <button
+              class="gallery-arrow gallery-arrow--left"
+              type="button"
+              aria-label="Scroll certifications left"
+            >
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
 
-          <article class="cert-card" aria-label="Certification 2">
-            <h3 class="cert-title" id="cert2Title">Certification Name</h3>
-            <p class="cert-subtitle" id="cert2Org">Issuer / Platform</p>
-            <p class="cert-dates" id="cert2Dates">Month YYYY</p>
-          </article>
+            <div
+              class="projects-track"
+              tabindex="0"
+              aria-label="Certifications track"
+            >
+              <article
+                class="portfolio-item project-card"
+                aria-label="Certification 1"
+              >
+                <img
+                  class="project-thumb"
+                  src="images/icon.png"
+                  alt="Certification 1 thumbnail"
+                  loading="lazy"
+                />
+                <h3 id="cert1Title">Certification Name</h3>
+                <p id="cert1Org">Issuer / Platform</p>
+                <p id="cert1Dates">Month YYYY</p>
+              </article>
+
+              <article
+                class="portfolio-item project-card"
+                aria-label="Certification 2"
+              >
+                <img
+                  class="project-thumb"
+                  src="images/icon.png"
+                  alt="Certification 2 thumbnail"
+                  loading="lazy"
+                />
+                <h3 id="cert2Title">Certification Name</h3>
+                <p id="cert2Org">Issuer / Platform</p>
+                <p id="cert2Dates">Month YYYY</p>
+              </article>
+            </div>
+
+            <button
+              class="gallery-arrow gallery-arrow--right"
+              type="button"
+              aria-label="Scroll certifications right"
+            >
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div
+            class="photo-gallery-dots projects-dots"
+            aria-label="Certifications dots"
+          ></div>
         </div>
       </div>
     </section>
@@ -442,7 +520,7 @@
               <i class="fa-solid fa-phone" aria-hidden="true"></i>
               <div class="contact-content">
                 <span class="contact-label">Phone</span>
-                <a href="#" id="phoneNumber">+94 70 505 1901</a>
+                <a href="tel:+94705051901" id="phoneNumber">+94 70 505 1901</a>
               </div>
             </div>
           </div>

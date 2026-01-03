@@ -361,6 +361,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextBtn = projectsRoot.querySelector(".gallery-arrow--right");
     const dotsRoot = projectsRoot.querySelector(".projects-dots");
 
+    const itemLabel =
+      projectsRoot.getAttribute("data-item-label") ||
+      projectsRoot.getAttribute("aria-label") ||
+      "project";
+
     if (!track || !prevBtn || !nextBtn || !dotsRoot) return;
 
     const cards = Array.from(track.querySelectorAll(".project-card"));
@@ -436,7 +441,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const dot = document.createElement("button");
       dot.type = "button";
       dot.className = "photo-dot";
-      dot.setAttribute("aria-label", `Go to project ${idx + 1}`);
+      dot.setAttribute("aria-label", `Go to ${itemLabel} ${idx + 1}`);
       dot.addEventListener("click", () => scrollToIndex(idx));
       dotsRoot.appendChild(dot);
     });
